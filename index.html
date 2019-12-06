@@ -15,202 +15,237 @@
           </div>
           <!--TOP NAV End-->
 
+
           <!--Homepage Start-->
-          <div id="homepage" class="">
+          <div id="homepage" class="centered">
                <!-- Some Hero Text -->
                <h1>Hero Text</h1>
 
                <!-- 3 Buttons for all the different Quizzes -->
-               <div class="all-btns">
-                    <div class="btn">
-                         <button type="button" name="button">HTML Quiz</button>
-                    </div>
+               <div id="all-btns">
+                    <button type="button" name="button">HTML Quiz</button>
 
-                    <div class="btn">
-                         <button type="button" name="button">CSS Quiz</button>
-                    </div>
+                    <button type="button" name="button">CSS Quiz</button>
 
-                    <div class="btn">
-                         <button type="button" name="button">JS Quiz</button>
-                    </div>
+                    <button type="button" name="button">JS Quiz</button>
                </div>
           </div>
           <!--Homepage End-->
 
 
           <!--HTML-Quiz Landing Page Start-->
-          <div id="html-landing" style="display: none;">
+          <div id="html-landing" class="landing centered hide">
                <!-- Brief Intro of the Quiz -->
                <h1>This is a HTML Quiz Intro.</h1>
                <!-- Button to Start the timer -->
-               <button type="button" name="button">Start the Quiz!</button>
+               <button type="button" name="startBtn">Start the Quiz!</button>
           </div>
           <!--HTML-Quiz Landing Page End-->
 
 
           <!--CSS-Quiz Landing Page Start-->
-          <div id="css-landing" style="display: none;">
+          <div id="css-landing" class="landing centered hide">
                <!-- Brief Intro of the Quiz -->
                <h1>This is a CSS Quiz Intro.</h1>
                <!-- Button to Start the timer -->
-               <button type="button" name="button">Start the Quiz!</button>
+               <button type="button" name="startBtn">Start the Quiz!</button>
           </div>
           <!--CSS-Quiz Landing Page End-->
 
 
           <!--JS-Quiz Landing Page Start-->
-          <div id="js-landing" style="display: none;">
+          <div id="js-landing" class="landing centered hide">
                <!-- Brief Intro of the Quiz -->
                <h1>This is a JavaScript Quiz Intro.</h1>
                <!-- Button to Start the timer -->
-               <button type="button" name="button">Start the Quiz!</button>
+               <button type="button" name="startBtn">Start the Quiz!</button>
           </div>
           <!--JS-Quiz Landing Page End-->
 
 
           <!--HTML-Quiz Start-->
-          <div class="html-quiz" style="display: none;">
-               <div class="html-ques1">
-                    <h1>What does HTML stands for?</h1>
+          <div id="html-quiz" class="centered hide">
+               <h1>HTML Quiz</h1>
+               <h1>x of 5</h1>
 
-                    <div class="option"><label><input name="h-ques1" type="radio">Hypertext Machine language</label></div>
-                    <div class="option"><label><input name="h-ques1" type="radio">Hypertext and links markup language</label></div>
-                    <div class="option"><label><input name="h-ques1" type="radio">Hypertext Markup Language</label></div>
-                    <div class="option"><label><input name="h-ques1" type="radio">Hightext machine language</label></div>
-               </div>
+               <div class="html-questions">
+                    <div id="h-ques1" class="html-ques">
+                         <h1>What does HTML stands for?</h1>
 
-               <div class="html-ques2">
-                    <h1>How is document type initialized in HTML5?</h1>
+                         <div class="options">
+                              <label><input name="h-ques1" type="radio">Hypertext Machine language</label>
 
-                    <div class="option"><label><input name="h-ques2" type="radio">&#60;!DCOTYPE html&#62;</label></div>
-                    <div class="option"><label><input name="h-ques2" type="radio">&#60;DOCTYPE&#62;</label></div>
-                    <div class="option"><label><input name="h-ques2" type="radio">&#60;!DOCTYPE html&#62;</label></div>
-                    <div class="option"><label><input name="h-ques2" type="radio">&#60;/DOCTYPE HTML&#62;</label></div>
-               </div>
+                              <label><input name="h-ques1" type="radio">Hypertext and links markup language</label>
 
-               <div class="html-ques3">
-                    <h1>Which of the following HTML Elements is used for making any text bold?</h1>
+                              <label><input name="h-ques1" type="radio">Hypertext Markup Language</label>
 
-                    <div class="option"><label><input name="h-ques3" type="radio">&#60;p&#62;</label></div>
-                    <div class="option"><label><input name="h-ques3" type="radio">&#60;i&#62;</label></div>
-                    <div class="option"><label><input name="h-ques3" type="radio">&#60;li&#62;</label></div>
-                    <div class="option"><label><input name="h-ques3" type="radio">&#60;b&#62;</label></div>
-               </div>
+                              <label><input name="h-ques1" type="radio">Hightext machine language</label>
+                         </div>
+                    </div>
 
-               <div class="html-ques4">
-                    <h1>Which of the following HTML element is used for creating an unordered list?</h1>
+                    <div id="h-ques2" class="html-ques hide">
+                         <h1>How is document type initialized in HTML5?</h1>
 
-                    <div class="option"><label><input name="c-ques4" type="radio">&#60;b&#62;</label></div>
-                    <div class="option"><label><input name="c-ques4" type="radio">&#60;ol&#62;</label></div>
-                    <div class="option"><label><input name="c-ques4" type="radio">&#60;ul&#62;</label></div>
-                    <div class="option"><label><input name="c-ques4" type="radio">&#60;p&#62;</label></div>
-               </div>
+                         <div class="options">
+                              <label><input name="h-ques2" type="radio">&#60;!DCOTYPE html&#62;</label>
 
-               <div class="html-ques5">
-                    <h1>How many heading tags are there in HTML5?</h1>
+                              <label><input name="h-ques2" type="radio">&#60;DOCTYPE&#62;</label>
 
-                    <div class="option"><label><input name="c-ques5" type="radio">6</label></div>
-                    <div class="option"><label><input name="c-ques5" type="radio">5</label></div>
-                    <div class="option"><label><input name="c-ques5" type="radio">2</label></div>
-                    <div class="option"><label><input name="c-ques5" type="radio">3</label></div>
+                              <label><input name="h-ques2" type="radio">&#60;!DOCTYPE html&#62;</label>
+
+                              <label><input name="h-ques2" type="radio">&#60;/DOCTYPE HTML&#62;</label>
+                         </div>
+                    </div>
+
+                    <div id="h-ques3" class="html-ques hide">
+                         <h1>Which of the following HTML Elements is used for making any text bold?</h1>
+
+                         <div class="options">
+                              <label><input name="h-ques3" type="radio">&#60;p&#62;</label>
+
+                              <label><input name="h-ques3" type="radio">&#60;i&#62;</label>
+
+                              <label><input name="h-ques3" type="radio">&#60;li&#62;</label>
+
+                              <label><input name="h-ques3" type="radio">&#60;b&#62;</label>
+                         </div>
+                    </div>
+
+                    <div id="h-ques4" class="html-ques hide">
+                         <h1>Which of the following HTML element is used for creating an unordered list?</h1>
+
+                         <div class="options">
+                              <label><input name="h-ques4" type="radio">&#60;b&#62;</label>
+
+                              <label><input name="h-ques4" type="radio">&#60;ol&#62;</label>
+
+                              <label><input name="h-ques4" type="radio">&#60;ul&#62;</label>
+
+                              <label><input name="h-ques4" type="radio">&#60;p&#62;</label>
+                         </div>
+                    </div>
+
+                    <div id="h-ques5" class="html-ques hide">
+                         <h1>How many heading tags are there in HTML5?</h1>
+
+                         <div class="options">
+                              <label><input name="h-ques5" type="radio">6</label>
+
+                              <label><input name="h-ques5" type="radio">5</label>
+
+                              <label><input name="h-ques5" type="radio">2</label>
+
+                              <label><input name="h-ques5" type="radio">3</label>
+                         </div>
+                    </div>
                </div>
           </div>
           <!--HTML-Quiz End-->
 
 
           <!--CSS-Quiz Start-->
-          <div class="css-quiz" style="display: none;">
-               <div class="css-ques1">
-                    <h1>What does CSS stand for?</h1>
+          <div id="css-quiz" class="centered hide">
+               <h1>CSS Quiz</h1>
+               <h1>x of 5</h1>
 
-                    <div class="option"><label><input name="c-ques1" type="radio">Computer Style Sheets</label></div>
-                    <div class="option"><label><input name="c-ques1" type="radio">Cascading Style Sheets</label></div>
-                    <div class="option"><label><input name="c-ques1" type="radio">Creative Style Sheets</label></div>
-                    <div class="option"><label><input name="c-ques1" type="radio">Colorful Style Sheets</label></div>
-               </div>
+               <div class="css-questions">
+                    <div class="css-ques1">
+                         <h1>What does CSS stand for?</h1>
 
-               <div class="css-ques2">
-                    <h1>Which is the correct CSS syntax?</h1>
+                         <div class="option"><label><input name="c-ques1" type="radio">Computer Style Sheets</label></div>
+                         <div class="option"><label><input name="c-ques1" type="radio">Cascading Style Sheets</label></div>
+                         <div class="option"><label><input name="c-ques1" type="radio">Creative Style Sheets</label></div>
+                         <div class="option"><label><input name="c-ques1" type="radio">Colorful Style Sheets</label></div>
+                    </div>
 
-                    <div class="option"><label><input name="c-ques2" type="radio">body : color = black;</label></div>
-                    <div class="option"><label><input name="c-ques2" type="radio">body {color : black;}</label></div>
-                    <div class="option"><label><input name="c-ques2" type="radio">.body {color : black;}</label></div>
-                    <div class="option"><label><input name="c-ques2" type="radio">{body : color = black}</label></div>
-               </div>
+                    <div class="css-ques2">
+                         <h1>Which is the correct CSS syntax?</h1>
 
-               <div class="css-ques3">
-                    <h1>How do you add a background color for all &#60;h1&#62; elements?</h1>
+                         <div class="option"><label><input name="c-ques2" type="radio">body : color = black;</label></div>
+                         <div class="option"><label><input name="c-ques2" type="radio">body {color : black;}</label></div>
+                         <div class="option"><label><input name="c-ques2" type="radio">.body {color : black;}</label></div>
+                         <div class="option"><label><input name="c-ques2" type="radio">{body : color = black}</label></div>
+                    </div>
 
-                    <div class="option"><label><input name="c-ques3" type="radio">h1.all {background-color : #FFFFFF;}</label></div>
-                    <div class="option"><label><input name="c-ques3" type="radio">all.h1 {background-color : #FFFFFF;}</label></div>
-                    <div class="option"><label><input name="c-ques3" type="radio">h1 {background-color : #FFFFFF;}</label></div>
-                    <div class="option"><label><input name="c-ques3" type="radio">h1 {backgroundColor : #FFFFFF;}</label></div>
-               </div>
+                    <div class="css-ques3">
+                         <h1>How do you add a background color for all &#60;h1&#62; elements?</h1>
 
-               <div class="css-ques4">
-                    <h1>Which CSS property controls the text size?</h1>
+                         <div class="option"><label><input name="c-ques3" type="radio">h1.all {background-color : #FFFFFF;}</label></div>
+                         <div class="option"><label><input name="c-ques3" type="radio">all.h1 {background-color : #FFFFFF;}</label></div>
+                         <div class="option"><label><input name="c-ques3" type="radio">h1 {background-color : #FFFFFF;}</label></div>
+                         <div class="option"><label><input name="c-ques3" type="radio">h1 {backgroundColor : #FFFFFF;}</label></div>
+                    </div>
 
-                    <div class="option"><label><input name="c-ques4" type="radio">text-style</label></div>
-                    <div class="option"><label><input name="c-ques4" type="radio">test-size</label></div>
-                    <div class="option"><label><input name="c-ques4" type="radio">font-size</label></div>
-                    <div class="option"><label><input name="c-ques4" type="radio">font-style</label></div>
-               </div>
+                    <div class="css-ques4">
+                         <h1>Which CSS property controls the text size?</h1>
 
-               <div class="css-ques5">
-                    <h1>What is the correct CSS syntax for making all the &#60;p&#62; elements bold?</h1>
-                    <div class="option"><label><input name="c-ques5" type="radio">&#60;p style = "font-size : bold;"&#62;</label></div>
-                    <div class="option"><label><input name="c-ques5" type="radio">&#60;p style = "text-size: bold;"&#62;</label></div>
-                    <div class="option"><label><input name="c-ques5" type="radio">p {font-weight : bold;}</label></div>
-                    <div class="option"><label><input name="c-ques5" type="radio">p {text-size : bold;}</label></div>
+                         <div class="option"><label><input name="c-ques4" type="radio">text-style</label></div>
+                         <div class="option"><label><input name="c-ques4" type="radio">test-size</label></div>
+                         <div class="option"><label><input name="c-ques4" type="radio">font-size</label></div>
+                         <div class="option"><label><input name="c-ques4" type="radio">font-style</label></div>
+                    </div>
+
+                    <div class="css-ques5">
+                         <h1>What is the correct CSS syntax for making all the &#60;p&#62; elements bold?</h1>
+                         <div class="option"><label><input name="c-ques5" type="radio">&#60;p style = "font-size : bold;"&#62;</label></div>
+                         <div class="option"><label><input name="c-ques5" type="radio">&#60;p style = "text-size: bold;"&#62;</label></div>
+                         <div class="option"><label><input name="c-ques5" type="radio">p {font-weight : bold;}</label></div>
+                         <div class="option"><label><input name="c-ques5" type="radio">p {text-size : bold;}</label></div>
+                    </div>
                </div>
           </div>
           <!--CSS-Quiz End-->
 
 
           <!--JS-Quiz Start-->
-          <div class="js-quiz" style="display: none;">
-               <div class="js-ques1">
-                    <h1>Inside which HTML element do we put the JavaScript?</h1>
+          <div id="js-quiz" class="centered hide">
+               <h1>JS Quiz</h1>
+               <h1>x of 5</h1>
 
-                    <div class="option"><label><input name="js-ques1" type="radio">&#60;js&#62;</label></div>
-                    <div class="option"><label><input name="js-ques1" type="radio">&#60;javascript&#62;</label></div>
-                    <div class="option"><label><input name="js-ques1" type="radio">&#60;script&#62;</label></div>
-                    <div class="option"><label><input name="js-ques1" type="radio">&#60;scripting&#62;</label></div>
-               </div>
+               <div class="js-questions">
+                    <div class="js-ques1">
+                         <h1>Inside which HTML element do we put the JavaScript?</h1>
 
-               <div class="js-ques2">
-                    <h1>What is the correct JavaScript syntax to change the content of the HTML element below?
-                    <br><br>
-                    &#60;p id="demo"&#62;This is a demonstration.&#60;/p&#62;</h1>
+                         <div class="option"><label><input name="js-ques1" type="radio">&#60;js&#62;</label></div>
+                         <div class="option"><label><input name="js-ques1" type="radio">&#60;javascript&#62;</label></div>
+                         <div class="option"><label><input name="js-ques1" type="radio">&#60;script&#62;</label></div>
+                         <div class="option"><label><input name="js-ques1" type="radio">&#60;scripting&#62;</label></div>
+                    </div>
 
-                    <div class="option"><label><input name="js-ques2" type="radio">#demo.innerHTML = "Hello World!";</label></div>
-                    <div class="option"><label><input name="js-ques2" type="radio">document.getElement("p").innerHTML = "Hello World!";</label></div>
-                    <div class="option"><label><input name="js-ques2" type="radio">document.getElementByName("p").innerHTML = "Hello World!";</label></div>
-                    <div class="option"><label><input name="js-ques2" type="radio">document.getElementById("demo").innerHTML = "Hello World!"</label></div>
-               </div>
+                    <div class="js-ques2">
+                         <h1>What is the correct JavaScript syntax to change the content of the HTML element below?
+                         <br><br>
+                         &#60;p id="demo"&#62;This is a demonstration.&#60;/p&#62;</h1>
 
-               <div class="js-ques3">
-                    <h1>Where is the correct place to insert a JavaScript?</h1>
+                         <div class="option"><label><input name="js-ques2" type="radio">#demo.innerHTML = "Hello World!";</label></div>
+                         <div class="option"><label><input name="js-ques2" type="radio">document.getElement("p").innerHTML = "Hello World!";</label></div>
+                         <div class="option"><label><input name="js-ques2" type="radio">document.getElementByName("p").innerHTML = "Hello World!";</label></div>
+                         <div class="option"><label><input name="js-ques2" type="radio">document.getElementById("demo").innerHTML = "Hello World!"</label></div>
+                    </div>
 
-                    <div class="option"><label><input name="js-ques3" type="radio">Both the &#60;head&#62; section and the &#60;body&#62; section are correct</label></div>
-                    <div class="option"><label><input name="js-ques3" type="radio">The &#60;head&#62; section ONLY</label></div>
-                    <div class="option"><label><input name="js-ques3" type="radio">The &#60;body&#62; section ONLY</label></div>
-               </div>
+                    <div class="js-ques3">
+                         <h1>Where is the correct place to insert a JavaScript?</h1>
 
-               <div class="js-ques4">
-                    <h1>The external JavaScript file must contain the &#60;script&#62; tag.</h1>
+                         <div class="option"><label><input name="js-ques3" type="radio">Both the &#60;head&#62; section and the &#60;body&#62; section are correct</label></div>
+                         <div class="option"><label><input name="js-ques3" type="radio">The &#60;head&#62; section ONLY</label></div>
+                         <div class="option"><label><input name="js-ques3" type="radio">The &#60;body&#62; section ONLY</label></div>
+                    </div>
 
-                    <div class="option"><label><input name="js-ques4" type="radio">True</label></div>
-                    <div class="option"><label><input name="js-ques4" type="radio">False</label></div>
-               </div>
+                    <div class="js-ques4">
+                         <h1>The external JavaScript file must contain the &#60;script&#62; tag.</h1>
 
-               <div class="js-ques5">
-                    <h1>How do you write "Hello World" in an alert box?</h1>
+                         <div class="option"><label><input name="js-ques4" type="radio">True</label></div>
+                         <div class="option"><label><input name="js-ques4" type="radio">False</label></div>
+                    </div>
 
-                    <div class="option"><label><input name="js-ques5" type="radio">alertBox("Hello World");</label></div>
-                    <div class="option"><label><input name="js-ques5" type="radio">msgBox("Hello World");</label></div>
-                    <div class="option"><label><input name="js-ques5" type="radio">alert("Hello World");</label></div>
-                    <div class="option"><label><input name="js-ques5" type="radio">msg4("Hello World");</label></div>
+                    <div class="js-ques5">
+                         <h1>How do you write "Hello World" in an alert box?</h1>
+
+                         <div class="option"><label><input name="js-ques5" type="radio">alertBox("Hello World");</label></div>
+                         <div class="option"><label><input name="js-ques5" type="radio">msgBox("Hello World");</label></div>
+                         <div class="option"><label><input name="js-ques5" type="radio">alert("Hello World");</label></div>
+                         <div class="option"><label><input name="js-ques5" type="radio">msg4("Hello World");</label></div>
+                    </div>
                </div>
           </div>
           <!--JS-Quiz End-->

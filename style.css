@@ -1,0 +1,22 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     width: 100%;
+}
+
+.centered{
+     width: 60%;
+     margin: auto;
+}
+
+.hide{
+     display: none;
+}
+
+.show{
+     display: block;
+}
