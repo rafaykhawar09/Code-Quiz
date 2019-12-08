@@ -1,6 +1,7 @@
 var main = document.querySelector("#main");
 var homepage = document.querySelector("#landing-page");
 var start = document.querySelector("#start");
+var time = document.querySelector("#time");
 
 var quesArr=[
      {
@@ -34,6 +35,21 @@ var quesArr=[
      }
 ];
 var index = 0;
+var timer = parseInt(time.textContent);
+
+var timeInterval;
+
+function startTime(){
+     timeInterval = setInterval(function(){
+
+          if(index === quesArr.length){
+               clearInterval(timeInterval);
+          }
+          timer--;
+          time.textContent = timer;
+
+     }, 1000);
+}
 
 function createAndLoadQues(){
      var div = document.createElement("div");
@@ -68,6 +84,7 @@ function createAndLoadQues(){
                }
                else{
                     alert("Wrong Answer!!")
+                    timer -= 10;
                }
                this.parentElement.parentElement.classList.add("hide");
                index++;
@@ -81,5 +98,6 @@ function createAndLoadQues(){
 
 start.addEventListener("click", function(){
      homepage.classList.add("hide");
+     startTime();
      createAndLoadQues();
 });
