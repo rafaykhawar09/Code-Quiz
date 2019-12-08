@@ -8,19 +8,6 @@ body{
      width: 100%;
 }
 
-.navbar{
-     background-color: black;
-     padding: 10px;
-}
-
-.content-wrapper{
-     width: 70%;
-     height: 500px;
-     margin: auto;
-     background-color: grey;
-     border: 1px solid black;
-}
-
 h1, p{
      text-align: center;
 }
@@ -29,9 +16,24 @@ h2{
      color: white;
 }
 
+.wrapper-navbar{
+     background-color: black;
+     padding: 10px;
+}
+
 .navbar{
+     width: 70%;
+     margin: auto;
      display: flex;
      justify-content: space-between;
+}
+
+.content-wrapper{
+     width: 70%;
+     height: 500px;
+     margin: auto;
+     background-color: grey;
+     border: 1px solid black;
 }
 
 .start-wrapper{
@@ -44,6 +46,13 @@ h2{
 }
 
 .choices{
+     width: 50%;
+     margin: auto;
      display: flex;
      flex-direction: column;
+}
+
+.exit-page{
+     width: 40%;
+     margin: auto;
 }

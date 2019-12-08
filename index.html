@@ -8,15 +8,16 @@
      </head>
 
      <body>
-          <div class="navbar">
-               <div class="highscore">
-                    <button type="button" name="view-highscore">View Highscore</button>
-               </div>
-               <div class="timer">
-                    <h2>Timer: <span id="time">75</span></h2>
+          <div class="wrapper-navbar">
+               <div class="navbar">
+                    <div class="highscore">
+                         <button id="highscore" type="button" name="view-highscore">View Highscore</button>
+                    </div>
+                    <div class="timer">
+                         <h2>Timer: <span id="time">0</span></h2>
+                    </div>
                </div>
           </div>
-
           <br>
 
           <div id="main" class="content-wrapper">
@@ -25,13 +26,28 @@
                     <br>
 
                     <p>
-                         Try to answer the following questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 10 seconds.
+                         Try to answer the following questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 15 seconds.
                     </p>
                     <br>
 
                     <div class="start-wrapper">
                          <button id="start" type="button" name="start-button">Start the Quiz!</button>
                     </div>
+               </div>
+
+               <div class="exit-page hide">
+                    <h1>All Done!</h1>
+                    <p>Your final score is <span id="final-score">0</span></p>
+
+                    <form id="submit-name">
+                         <label>Enter your Initials:</label>
+                         <input id="initials" type="text" placeholder="Mickey">
+                         <input type="submit" value="Submit">
+                    </form>
+               </div>
+
+               <div class="highscore hide">
+                    
                </div>
           </div>
 

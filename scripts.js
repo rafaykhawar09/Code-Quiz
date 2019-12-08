@@ -1,7 +1,13 @@
 var main = document.querySelector("#main");
 var homepage = document.querySelector("#landing-page");
 var start = document.querySelector("#start");
-var time = document.querySelector("#time");
+var spanTime = document.querySelector("#time");
+var exitPage = document.querySelector(".exit-page");
+var spanFinalScore = document.querySelector("#final-score");
+var submitName = document.querySelector("#submit-name");
+var initials = document.querySelector("#initials");
+var highscore = document.querySelector("#highscore");
+
 
 var quesArr=[
      {
@@ -35,19 +41,42 @@ var quesArr=[
      }
 ];
 var index = 0;
-var timer = parseInt(time.textContent);
-
+var timer = parseInt(quesArr.length*15);
 var timeInterval;
+
+spanTime.textContent = timer;
+
+var score = [];
+var index = 0;
+
+
+function saveScore(){
+
+     submitName.addEventListener("submit", function(event){
+
+          event.preventDefault();
+          console.log(initials.value);
+          score.push({"name": initials.value, "score": spanFinalScore.textContent});
+
+
+          localStorage.setItem("score", JSON.stringify(score));
+          exitPage.classList.add("hide");
+          homepage.classList.remove("hide");
+     });
+};
 
 function startTime(){
      timeInterval = setInterval(function(){
 
-          if(index === quesArr.length){
-               clearInterval(timeInterval);
-          }
           timer--;
-          time.textContent = timer;
+          spanTime.textContent = timer;
 
+          if(index === quesArr.length || timer < 0){
+               clearInterval(timeInterval);
+               spanFinalScore.textContent = timer;
+               exitPage.classList.remove("hide");
+               saveScore();
+          }
      }, 1000);
 }
 
@@ -84,7 +113,7 @@ function createAndLoadQues(){
                }
                else{
                     alert("Wrong Answer!!")
-                    timer -= 10;
+                    timer -= 15;
                }
                this.parentElement.parentElement.classList.add("hide");
                index++;
@@ -96,8 +125,18 @@ function createAndLoadQues(){
      }
 };
 
+
 start.addEventListener("click", function(){
      homepage.classList.add("hide");
      startTime();
      createAndLoadQues();
+});
+
+highscore.addEventListener("click", function(){
+
+     var allScores = JSON.parse(localStorage.getItem("score"));
+
+     for (var i = 0; i < allScores.length; i++) {
+          alert("Highscores\n"+allScores[i].name +": "+allScores[i].score);
+     }
 });
