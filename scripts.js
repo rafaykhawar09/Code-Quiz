@@ -47,8 +47,6 @@ var timeInterval;
 spanTime.textContent = timer;
 
 var score = [];
-var index = 0;
-
 
 function saveScore(){
 
@@ -56,12 +54,27 @@ function saveScore(){
 
           event.preventDefault();
           console.log(initials.value);
+
           score.push({"name": initials.value, "score": spanFinalScore.textContent});
-
-
           localStorage.setItem("score", JSON.stringify(score));
+          //JSON.parse(localStorage.getItem("score"));
+
+          // var emptyOrNot = localStorage.getItem("score");
+          // var oldScores;
+
+          // if(emptyOrNot === null){ 
+          //      oldScores="";
+          
+          // }
+          // else{
+          //      oldScores = JSON.parse(emptyOrNot);
+          // }
           exitPage.classList.add("hide");
           homepage.classList.remove("hide");
+
+          index = 0;
+          timer = parseInt(quesArr.length*15);
+          spanTime.textContent = timer;
      });
 };
 
@@ -75,9 +88,7 @@ function startTime(){
                clearInterval(timeInterval);
                spanFinalScore.textContent = timer;
                exitPage.classList.remove("hide");
-               index = 0;
-               timer = 0;
-               spanTime.textContent = timer;
+               
                saveScore();
           }
      }, 1000);
@@ -107,9 +118,6 @@ function createAndLoadQues(){
           btn.textContent = answers[i];
 
           btn.addEventListener("click", function(){
-
-               console.log(this.dataset.answer);
-               console.log(quesArr[index].correctAns)
 
                if(this.dataset.answer === quesArr[index].correctAns){
                     alert("Awesome!!");
