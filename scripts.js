@@ -75,6 +75,9 @@ function startTime(){
                clearInterval(timeInterval);
                spanFinalScore.textContent = timer;
                exitPage.classList.remove("hide");
+               index = 0;
+               timer = 0;
+               spanTime.textContent = timer;
                saveScore();
           }
      }, 1000);
